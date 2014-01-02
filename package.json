@@ -1,0 +1,31 @@
+{
+    "name": "md2book",
+    "title": "MarkDown to pdf, epub, html, mobi, rtf formats.",
+    "author": "DropShape",
+    "license": "",
+    "language": "en_US",
+    "version": "0.0.0",
+    "description": "Pandoc and Kindlegen wrappers for Markdown. Supports all pandoc options to customize your books",
+    "scripts": {
+        "test": "test"
+    },
+    "main": "lib/pandoc",
+    "keywords": [
+        "markdown",
+        "mobi",
+        "pdf",
+        "rtf",
+        "ebook",
+        "html",
+        "pandoc",
+        "kindlegen"
+    ],
+    "dependencies": {
+        "grunt": "~0.4.2",
+        "glob": "~3.2.7",
+        "grunt-replace": "~0.5.1"
+    },
+    "devDependencies": {
+        "grunt-shell": "~0.6.1"
+    }
+}

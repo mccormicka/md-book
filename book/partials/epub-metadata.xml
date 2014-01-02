@@ -1,0 +1,7 @@
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title id="title1">@@title</dc:title>
+    <meta refines="#title1" property="title-type">main</meta>
+    <dc:creator>@@author</dc:creator>
+    <dc:rights>@@license</dc:rights>
+    <dc:language>@@language</dc:language>
+</metadata>
