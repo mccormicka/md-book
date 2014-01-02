@@ -1,5 +1,5 @@
 {
-    "name": "md2book",
+    "name": "md-book",
     "title": "MarkDown to pdf, epub, html, mobi, rtf formats.",
     "author": "DropShape",
     "license": "",
@@ -9,7 +9,11 @@
     "scripts": {
         "test": "test"
     },
-    "main": "lib/pandoc",
+    "main": "lib/mdbook",
+    "files": [
+        "lib/mdbook.js",
+        "lib/mdbook-util.js"
+    ],
     "keywords": [
         "markdown",
         "mobi",
