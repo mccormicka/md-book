@@ -141,8 +141,8 @@ module.exports = function (grunt) {
         }
     });
 
-    //Pandoc for converting markdown files
-    grunt.loadTasks('lib/');
+    //tasks for converting markdown files
+    grunt.loadTasks('tasks/');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-replace');
 };

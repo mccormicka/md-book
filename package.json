@@ -9,10 +9,10 @@
     "scripts": {
         "test": "test"
     },
-    "main": "lib/mdbook",
+    "main": "tasks/mdbook",
     "files": [
-        "lib/mdbook.js",
-        "lib/mdbook-util.js"
+        "tasks/mdbook.js",
+        "tasks/mdbook-util.js"
     ],
     "keywords": [
         "markdown",
