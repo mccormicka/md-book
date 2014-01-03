@@ -19,12 +19,13 @@ module.exports = function (grunt) {
 
     var compiledMarkdownFile = base + '/' + name + '.md';
 
-    grunt.registerTask('default', ['readme', 'html', 'rtf', 'pdf', 'kindle']);
-    grunt.registerTask('readme', ['shell:combine', 'shell:readme']);
-    grunt.registerTask('html', ['shell:cleanHtml', 'shell:combine', 'md-book:html', 'shell:moveMarkdown']);
-    grunt.registerTask('epub', ['shell:combine', 'replace', 'md-book:epub', 'shell:cleanEpub', 'shell:moveMarkdown']);
-    grunt.registerTask('rtf', ['shell:combine', 'md-book:rtf', 'shell:moveMarkdown']);
-    grunt.registerTask('pdf', ['shell:combine', 'md-book:pdf', 'shell:moveMarkdown']);
+    grunt.registerTask('clean', ['shell:cleanMarkDown']);
+    grunt.registerTask('default', ['clean',   'readme', 'html', 'rtf', 'pdf', 'kindle']);
+    grunt.registerTask('readme', ['clean','shell:readme']);
+    grunt.registerTask('html', ['clean','shell:cleanHtml', 'shell:combine', 'md-book:html', 'shell:moveMarkdown']);
+    grunt.registerTask('epub', ['clean','shell:combine', 'replace', 'md-book:epub', 'shell:cleanEpub', 'shell:moveMarkdown']);
+    grunt.registerTask('rtf', ['clean','shell:combine', 'md-book:rtf', 'shell:moveMarkdown']);
+    grunt.registerTask('pdf', ['clean','shell:combine', 'md-book:pdf', 'shell:moveMarkdown']);
     grunt.registerTask('kindle', ['epub', 'md-book:mobi']);
 
     // Project configuration.
@@ -34,14 +35,22 @@ module.exports = function (grunt) {
         shell: {
             combine: {
                 command: [
-                    'echo %' + title + ' > ' + compiledMarkdownFile,
+                    'echo %' + title + ' >> ' + compiledMarkdownFile,
                     'echo % by ' + author + ' >> ' + compiledMarkdownFile,
                     'echo "" >> ' + compiledMarkdownFile,
                     'awk \'{print ""}{print}\' ' + chapters + ' >> ' + compiledMarkdownFile
                 ].join('&&')
             },
             readme: {
-                command: 'pandoc -f markdown -t markdown '+ compiledMarkdownFile+ ' -o README.md'
+                command: [
+                    'awk \'{print ""}{print}\' ' + base + '/partials/00-Share.md' + ' >> ' + compiledMarkdownFile,
+                    'grunt shell:combine',
+                    'awk \'{print ""}{print}\' ' + base + '/partials/00-Share.md' + ' >> ' + compiledMarkdownFile,
+                    'pandoc -f markdown -t markdown '+ compiledMarkdownFile+ ' -o README.md'
+                ].join('&&')
+            },
+            cleanMarkDown: {
+                command: 'rm ' + compiledMarkdownFile
             },
             moveMarkdown: {
                 command: 'mv ' + compiledMarkdownFile + ' ' + dest + '/'
