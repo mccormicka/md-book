@@ -46,7 +46,7 @@ module.exports = function (grunt) {
                     'awk \'{print ""}{print}\' ' + base + '/partials/00-Share.md' + ' >> ' + compiledMarkdownFile,
                     'grunt shell:combine',
                     'awk \'{print ""}{print}\' ' + base + '/partials/00-Share.md' + ' >> ' + compiledMarkdownFile,
-                    'pandoc -f markdown -t markdown '+ compiledMarkdownFile+ ' -o README.md'
+                    'mv '+ compiledMarkdownFile + ' README.md'
                 ].join('&&')
             },
             cleanMarkDown: {
