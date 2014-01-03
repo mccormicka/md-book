@@ -21,11 +21,11 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', ['readme', 'html', 'rtf', 'pdf', 'kindle']);
     grunt.registerTask('readme', ['shell:combine', 'shell:readme']);
-    grunt.registerTask('html', ['shell:cleanHtml', 'shell:combine', 'pandoc:html', 'shell:moveMarkdown']);
-    grunt.registerTask('epub', ['shell:combine', 'replace', 'pandoc:epub', 'shell:cleanEpub', 'shell:moveMarkdown']);
-    grunt.registerTask('rtf', ['shell:combine', 'pandoc:rtf', 'shell:moveMarkdown']);
-    grunt.registerTask('pdf', ['shell:combine', 'pandoc:pdf', 'shell:moveMarkdown']);
-    grunt.registerTask('kindle', ['epub', 'pandoc:mobi']);
+    grunt.registerTask('html', ['shell:cleanHtml', 'shell:combine', 'md-book:html', 'shell:moveMarkdown']);
+    grunt.registerTask('epub', ['shell:combine', 'replace', 'md-book:epub', 'shell:cleanEpub', 'shell:moveMarkdown']);
+    grunt.registerTask('rtf', ['shell:combine', 'md-book:rtf', 'shell:moveMarkdown']);
+    grunt.registerTask('pdf', ['shell:combine', 'md-book:pdf', 'shell:moveMarkdown']);
+    grunt.registerTask('kindle', ['epub', 'md-book:mobi']);
 
     // Project configuration.
     grunt.initConfig({
@@ -33,7 +33,12 @@ module.exports = function (grunt) {
         //Compile all the chapters into one markdown file.
         shell: {
             combine: {
-                command: 'awk \'{print}\' ' + chapters + ' > ' + compiledMarkdownFile
+                command: [
+                    'echo %' + title + ' > ' + compiledMarkdownFile,
+                    'echo % by ' + author + ' >> ' + compiledMarkdownFile,
+                    'echo "" >> ' + compiledMarkdownFile,
+                    'awk \'{print ""}{print}\' ' + chapters + ' >> ' + compiledMarkdownFile
+                ].join('&&')
             },
             readme: {
                 command: 'pandoc -f markdown -t markdown '+ compiledMarkdownFile+ ' -o README.md -s '
@@ -69,7 +74,7 @@ module.exports = function (grunt) {
         //Compile the one markdown file into seperate output files.
         //First Download and Install PanDoc
         //http://johnmacfarlane.net/pandoc/installing.html
-        pandoc: {
+        'md-book': {
             options: {
                 dest: dest
             },
