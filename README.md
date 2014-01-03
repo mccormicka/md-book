@@ -1,9 +1,3 @@
----
-author:
-- by DropShape
-title: MarkDown to Book Readme
-...
-
 Description
 ===========
 

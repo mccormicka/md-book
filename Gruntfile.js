@@ -41,7 +41,7 @@ module.exports = function (grunt) {
                 ].join('&&')
             },
             readme: {
-                command: 'pandoc -f markdown -t markdown '+ compiledMarkdownFile+ ' -o README.md -s '
+                command: 'pandoc -f markdown -t markdown '+ compiledMarkdownFile+ ' -o README.md'
             },
             moveMarkdown: {
                 command: 'mv ' + compiledMarkdownFile + ' ' + dest + '/'
