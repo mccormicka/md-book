@@ -26,3 +26,4 @@ ln -s /path/to/kindlegen /usr/local/bin
 ```
 
 You can now build all the available types mentioned in the [**Usage guide**](#usage).
+
