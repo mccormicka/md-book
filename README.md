@@ -1,9 +1,13 @@
-
 Please Share on Twitter if you like #mdbook
 
 
 
-<a href="https://twitter.com/intent/tweet?hashtags=mdbook&amp;&amp;text=Check%20out%20this%20repo%20on%20github&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fgithub.com%2Fdropshape&amp;via=dropshape" style="float:right"><img src="https://raw.github.com/dropshape/md-book/master/twittershare.png"></a>
+<a href="https://twitter.com/intent/tweet?hashtags=mdbook&amp;&amp;text=Check%20out%20%23mdbook%20repo%20on%20github&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fgithub.com%2Fdropshape&amp;via=dropshape" style="float:right"><img src="https://raw.github.com/dropshape/md-book/master/twittershare.png"></a>
+
+
+
+
+
 
 %MarkDown to Book Readme
 % by DropShape
@@ -20,6 +24,8 @@ Any books that you can create using Pandoc you should be able to create using th
 
 
 Please visit the [pandoc documentation](http://johnmacfarlane.net/pandoc/README.html) for full details
+
+
 
 #Installation
 
@@ -76,6 +82,8 @@ ln -s /path/to/kindlegen /usr/local/bin
 
 
 You can now build all the available types mentioned in the [**Usage guide**](#usage).
+
+
 
 #Usage
 
@@ -155,6 +163,8 @@ grunt kindle
 
 ```
 
+
+
 #Options
 
 
@@ -203,8 +213,18 @@ __Optional__
 
 
 
+
+
+
+
 Please Share on Twitter if you like #mdbook
 
 
 
-<a href="https://twitter.com/intent/tweet?hashtags=mdbook&amp;&amp;text=Check%20out%20this%20repo%20on%20github&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fgithub.com%2Fdropshape&amp;via=dropshape" style="float:right"><img src="https://raw.github.com/dropshape/md-book/master/twittershare.png"></a>
+<a href="https://twitter.com/intent/tweet?hashtags=mdbook&amp;&amp;text=Check%20out%20%23mdbook%20repo%20on%20github&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fgithub.com%2Fdropshape&amp;via=dropshape" style="float:right"><img src="https://raw.github.com/dropshape/md-book/master/twittershare.png"></a>
+
+
+
+
+
+

@@ -99,7 +99,8 @@ module.exports = function (grunt) {
                         ' --normalize ' +
                         ' --smart ' +
                         ' --toc ' +
-                        ' --self-contained',
+                        ' --self-contained' +
+                        ' --filter ./tasks/filter/includes',
                     '-c': base + '/' + styles + '/html.css'
                 }
             },

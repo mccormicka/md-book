@@ -34,6 +34,7 @@ module.exports = function (grunt) {
                 commandString += ' ' + value;
             }
         }
+        console.log('Running command : ', commandString);
         return commandString;
     }
 
