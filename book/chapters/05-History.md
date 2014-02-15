@@ -1,7 +1,9 @@
 #CHANGELOG
 
-##0.0.3
+##0.0.4
+Fixing issue with relative path linking for filters.
 
+##0.0.3
 Automatically load the include filter so that GruntFiles do not need to be updated.
 See [Including scripts] for details.
 
