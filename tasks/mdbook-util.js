@@ -18,7 +18,7 @@ module.exports = function (grunt) {
     }
 
     function addFilters(commandString) {
-        commandString += '  --filter ./tasks/filter/includes';
+        commandString += '  --filter ' + __dirname + '/filter/includes';
         return commandString;
     }
 
@@ -39,6 +39,7 @@ module.exports = function (grunt) {
                 commandString += ' ' + value;
             }
         }
+
         commandString = addFilters(commandString);
 
         console.log('Running command : ', commandString);
