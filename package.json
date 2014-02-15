@@ -1,10 +1,10 @@
 {
     "name": "md-book",
     "title": "MarkDown to Book Readme",
-    "author": "DropShape",
+    "author": "Anthony McCormick",
     "repository": {
         "type": "git",
-        "url": "https://github.com/dropshape/md-book.git"
+        "url": "https://github.com/mccormicka/md-book.git"
     },
     "license": "",
     "language": "en_US",
