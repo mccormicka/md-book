@@ -115,7 +115,8 @@ module.exports = function (grunt) {
                         ' --epub-cover-image ' + base + '/' + cover +
                         ' --normalize ' +
                         ' --smart ' +
-                        ' --toc '
+                        ' --toc ' +
+                        ' --filter ./tasks/filter/includes'
                 }
             },
             //Download: http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211
@@ -139,7 +140,8 @@ module.exports = function (grunt) {
                         ' --epub-cover-image ' + base + '/' + cover +
                         ' --normalize ' +
                         ' --smart ' +
-                        ' --toc '
+                        ' --toc ' +
+                        ' --filter ./tasks/filter/includes'
                 }
             },
             rtf: {
@@ -150,7 +152,8 @@ module.exports = function (grunt) {
                         ' --title-prefix "' + title + '" ' +
                         ' --normalize ' +
                         ' --smart ' +
-                        ' --toc '
+                        ' --toc ' +
+                        ' --filter ./tasks/filter/includes'
                 }
             }
         }

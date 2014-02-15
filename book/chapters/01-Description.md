@@ -1,9 +1,3 @@
-~~~~ {include="tasks/mdbook.js" format="js"}
-
-Contents goes here
-
-~~~~
-
 # Description
 
 mdbook wraps the [Pandoc](http://johnmacfarlane.net/pandoc) and [kindlegen](http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000234621) CLI tools with a grunt task.
