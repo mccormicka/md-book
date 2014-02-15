@@ -25,17 +25,22 @@ __Optional__
 
 ##Including scripts
 
-MD2Book includes a haskell script that will allow you to link in your code rather than copy pasting it into the MD files. Simply run with the ```--filter ./tasks/filter/includes``` option or check out the sample Gruntfile for how to use it from within Grunt. Then anywhere from within your .md files you can add the following code which will place the included file into a code block with the style set to whatever style you wish to have applied.
+MD2Book includes a haskell script that will allow you to link in your code rather than copy pasting it into the MD files. Anywhere from within your .md files you can add the following code which will place the included file into a code block with the style set to whatever style you wish to have applied.
 
 ```
 ~~~~ {include="tasks/mdbook.js" style="javascript"}
 ~~~~
 ```
 
-__required__ __include__ : Path to the file to include.
-__optional__ __style__ : Style of the code
+__required__
 
-This will produce for example
+__include__ : Path to the file to include.
+
+__optional__
+
+__style__ : Style of the code
+
+This will produce for example:
 
 ~~~~ {include="tasks/mdbook.js" style="javascript"}
 ~~~~

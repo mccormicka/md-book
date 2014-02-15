@@ -17,6 +17,11 @@ module.exports = function (grunt) {
         process.chdir(baseDirectory);
     }
 
+    function addFilters(commandString) {
+        commandString += '  --filter ./tasks/filter/includes';
+        return commandString;
+    }
+
     function applyPandocOptions(options, file) {
         var key;
         var value;
@@ -34,6 +39,8 @@ module.exports = function (grunt) {
                 commandString += ' ' + value;
             }
         }
+        commandString = addFilters(commandString);
+
         console.log('Running command : ', commandString);
         return commandString;
     }

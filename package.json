@@ -8,7 +8,7 @@
     },
     "license": "",
     "language": "en_US",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Pandoc and Kindlegen wrappers for Markdown. Supports all pandoc options to customize your books",
     "scripts": {
         "test": "test"
