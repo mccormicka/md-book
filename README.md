@@ -36,7 +36,7 @@ Please visit the [pandoc documentation](http://johnmacfarlane.net/pandoc/README.
 
 ```
 
-npm install mdbook --save
+npm install md-book --save
 
 ```
 
