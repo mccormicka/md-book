@@ -28,11 +28,11 @@ Please visit the [pandoc documentation](http://johnmacfarlane.net/pandoc/README.
 
 
 
-#Installation
+# Installation
 
 
 
-##NPM
+## NPM
 
 ```
 
@@ -86,7 +86,7 @@ You can now build all the available types mentioned in the [**Usage guide**](#us
 
 
 
-#Usage
+# Usage
 
 
 
@@ -170,7 +170,7 @@ grunt kindle
 
 
 
-#Options
+# Options
 
 
 
@@ -220,7 +220,7 @@ __Optional__
 
 
 
-##Including scripts
+## Including scripts
 
 
 
@@ -268,11 +268,11 @@ This will produce for example:
 
 
 
-#CHANGELOG
+# CHANGELOG
 
 
 
-##0.0.3
+## 0.0.3
 
 
 
@@ -282,7 +282,7 @@ See [Including scripts] for details.
 
 
 
-##0.0.2
+## 0.0.2
 
 Added the ability to include external files so that code can be linked to rather than copy pasted into the book.
 
@@ -290,7 +290,7 @@ See [Including scripts] for details.
 
 
 
-##0.0.1
+## 0.0.1
 
 Initial Release
 
